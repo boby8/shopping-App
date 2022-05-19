@@ -1,0 +1,62 @@
+.boder_of_navigation {
+    
+    /* box-shadow: 3px 2px 5px 1px #fef9f9; */
+    box-shadow: 0 3px 5px rgb(0 0 0 / 10%);
+    
+  }
+  .margin{
+    display: flex;
+    margin-left: 15%;
+    margin-right: 15%;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .fields_name a {
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+  }
+  .logo_class {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+  }
+ 
+  .delivery_app {
+    padding: 5px;
+    color: #00e493;
+    font-size: 20px;
+    font-weight: 600;
+  }
+  .fields_name {
+    display: flex;
+    justify-content: end;
+    margin-right: 20%;
+  }
+  .fields_name a:hover {
+    /* box-shadow: 2px 2px 2px 2px #00e493; */
+    box-shadow: 0px 0px 2px 2px #00e493; 
+    border-radius: 5px;
+  }
+  .dropdownInNavbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .girlImgContainer{
+    width: 30%;
+    object-fit: fill;
+  }
+  .downArrowContainer{
+    width: 15px;
+    height: 10px;
+  }
+  .abbrText{
+    border-bottom: none !important;
+  }
+  .dropdownInNavbar:hover{
+    box-shadow: 0px 0px 2px 2px #00e493; 
+    border-radius: 5px;
+  }

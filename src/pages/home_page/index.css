@@ -1,0 +1,159 @@
+main {
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-top: 3%;
+}
+.main_div {
+  background-color: #fffbfb;
+}
+.left_arrow_content {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.left_arrow {
+  height: 15px;
+}
+.left_arrow img {
+  width: 100%;
+}
+
+.pickupForm {
+  background-color: #edfcff;
+
+  box-shadow: 0 0 5px rgb(0 0 0 / 5%);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+}
+.pen {
+  height: 50%;
+}
+.pickup {
+  display: flex;
+  font-size: 14px;
+  color: #566461;
+  justify-content: space-between;
+  font-family: "Montserrat", sans-serif;
+  margin-top: 1%;
+  margin-left: 2%;
+  margin-right: 5%;
+}
+.address_content {
+  display: flex;
+  align-items: center;
+}
+.home_img {
+  width: 2%;
+  margin-left: 2%;
+}
+.Home_text {
+  color: #000;
+
+  font-size: 18px;
+  font-weight: 700;
+  margin-left: 2%;
+}
+.address {
+  font-size: 18px;
+  color: #566461;
+  margin-left: 2%;
+  font-family: Courier New;
+}
+.cards {
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width:700px){
+  .cards{
+    display: flex;
+    flex-direction: column;
+  }
+}
+.card_1 {
+  display: flex;
+  width: 48%;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 3px 2px 5px 1px #e1e3e7;
+  border: 5px solid #ebe6e65c;
+}
+/* .card_1:hover{
+  border: 2px solid #00e493;
+} */
+@media (max-width:700px){
+  .card_1{
+    width: 100%;
+  }
+}
+
+.delivery {
+  display: flex;
+  flex-direction: column;
+}
+
+.card_2 {
+  display: flex;
+ width: 48%;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 3px 2px 5px 1px #e1e3e7;
+  border: 5px solid #ebe6e65c;
+}
+@media (max-width:700px){
+  .card_2{
+    width: 100%;
+  }
+}
+/* .card_2:hover{
+  border: 2px solid #00e493;
+} */
+.doller {
+  
+  padding: 3px;
+}
+.crypto_img {
+  height: 50%;
+  width: 7%;
+  
+  padding: 5px;
+}
+.crypto {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+
+  /* background-color: #e6fef5; */
+  border-radius: 2px;
+  font-size: 20px;
+  color: #00e493;
+  font-weight: 600;
+}
+.box_img {
+  width: 25%;
+  height: 80%;
+  margin: 2%;
+  overflow: hidden;
+}
+
+.special_delivery {
+  padding-left: 12px;
+  font-size: 18px;
+  color: #566461;
+  font-weight: 300;
+  text-transform: capitalize;
+}
+.New_Delivery {
+  font-size: 28px;
+  font-weight: 500;
+  color: #4a5752;
+  margin-left: 12px;
+}
+.select_delivery_type {
+  padding-left: 12px;
+  font-size: 18px;
+  color: #566461;
+  font-weight: 300;
+  text-transform: capitalize;
+}
+

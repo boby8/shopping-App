@@ -1,0 +1,26 @@
+
+.verify{
+    background-color: rgb(61, 219, 148);
+    width: 70%;
+    border: 2px solid rgb(61, 219, 148);
+    height: 40px;
+    align-items: center;
+    outline: none;
+}
+
+
+.content-verify{
+    display: flex;
+    flex-direction: row;
+   
+}
+.main-contentt{
+    width: 40%;
+    margin-left: 10%;
+    margin-top: 15%;
+}
+.send_opt{
+    color: grey;
+    text-align: left;
+    outline: none;
+}

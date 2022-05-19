@@ -1,0 +1,74 @@
+.arrow {
+  width: 1%;
+  height: 20px;
+  margin-right: 2%;
+}
+.next_button {
+  margin-top: 5%;
+
+  text-align: center;
+}
+.next_click {
+  border: 2px solid #6c756c;
+  background-color: #6c757d;
+  padding: 10px;
+  color: #fff;
+  font-size: 20px;
+  width: 30%;
+  border-radius: 5px;
+}
+.next_click:hover {
+  background-color: #fff;
+  border: 2px solid lightgreen;
+  color: black;
+}
+.textarea {
+  background-color: #ededed;
+  outline: none;
+  border: none;
+  margin-top: 20px;
+  width: 100%;
+}
+.Add_Recipients {
+  width: 100%;
+  padding: 20px;
+  background: #fff;
+  border: none;
+
+  font-size: 16px;
+  color: grey;
+  box-shadow: 2px 1px 3px 1px #e4e6eb;
+}
+.special_instruction {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5%;
+}
+.text_Area {
+  display: flex;
+  flex-wrap: wrap;
+}
+.heading-off-recipitent{
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  color: black;
+  font-weight: 600;
+}
+.user-data-on-recipitent{
+  display: flex;
+  justify-content: space-between;
+}
+.spanData{
+  display: flex;
+    align-items: center;
+}
+.main-user-data-on-recipitent{
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: 10%;
+}
+.content-of-button{
+  display: flex;
+  justify-content: space-between;
+}

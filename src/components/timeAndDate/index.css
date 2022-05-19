@@ -1,0 +1,21 @@
+.dateAndTime{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.date{
+    border: none;
+    border-bottom:2px solid grey;
+    border-bottom: 2px solid grey;
+   padding: 10px;
+  width: 20%
+  
+}
+.time{
+    border: none;
+    border-bottom:2px solid grey;
+    border-bottom: 2px solid grey;
+   padding: 10px;
+  width: 20%;
+  margin-left: 5%;
+}

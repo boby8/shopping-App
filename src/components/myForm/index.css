@@ -1,0 +1,119 @@
+.form_conatiner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+.cancelContainer {
+  width: 20px;
+  margin-left: 90%;
+}
+.addNewContactGeading {
+  font-size: 17px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+.profileConatiner {
+  width: 130px;
+}
+.penConatiner {
+  width: 20px;
+}
+.inputFields {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+}
+.Full_Name {
+  padding: 20px;
+  margin-top: 2%;
+  border: none;
+  border-bottom: 2px solid rgb(219, 217, 217);
+  outline: none;
+}
+
+.emailContainer {
+  padding: 20px;
+  margin-top: 2%;
+  border: none;
+  border-bottom: 2px solid rgb(219, 217, 217);
+  outline: none;
+}
+.AddressContainer {
+  padding: 20px;
+  margin-top: 2%;
+  border: none;
+  border-bottom: 2px solid rgb(219, 217, 217);
+  outline: none;
+}
+.labelForFavouriteContainer {
+  margin-top: 10%;
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+}
+.AddFavouriteLabel {
+  font-size: 15px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: rgb(112, 111, 111);
+  padding: 10px;
+}
+.buttonContainer {
+  margin-top: 10%;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  width: 95%;
+  align-items: center;
+}
+.Add_conatct_button {
+  color: #fff;
+  background-color: #007bff;
+  padding: 10px;
+  width: 80%;
+  border: 2px solid #007bff;
+  border-radius: 7px;
+  font-size: medium;
+}
+.cancel_button {
+  margin-top: 2%;
+  color: black;
+  background-color: #fff;
+  border-color: #fff;
+  padding: 10px;
+  width: 80%;
+  border: 2px solid #ffffff;
+  border-radius: 7px;
+  font-size: medium;
+}
+.cancel_button:hover {
+  background-color: rgb(214, 212, 212);
+  border: 1px solid black;
+  color: #fff;
+}
+
+.mobileNumber {
+  margin-top: 2%;
+}
+.PhoneInputInput {
+  padding: 20px;
+  border: none;
+  border-bottom: 2px solid rgb(219, 217, 217);
+  outline: none;
+}
+.PhoneInputCountrySelect{
+  border: 2px solid green;
+}
+.FavouriteUser{
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10%;
+  padding: 10px;
+}
+.pickUpAddress{
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

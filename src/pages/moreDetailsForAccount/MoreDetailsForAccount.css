@@ -1,0 +1,61 @@
+
+
+.input_details input{
+    border: 2px solid white;
+    border-bottom: 3px solid rgb(225, 219, 219);
+    width: 60%;
+    height: 40px;
+    outline: none;
+}
+.brief_content{
+ 
+    width: 40%;
+    margin-left: 10%;
+    margin-top: 10%
+}
+
+.create_account_with_details{
+    background-color: rgb(61, 219, 148);
+    width: 70%;
+    border: 2px solid rgb(61, 219, 148);
+    height: 40px;
+    border-radius:3px;
+    font-weight: bold;
+    outline: none;
+}
+.sub_heading{
+    color: grey;
+    text-align:left ;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.gender{
+    border: 2px solid white;
+    border-bottom: 3px solid rgb(225, 219, 219);
+    width: 60%;
+    height: 40px; 
+    outline: none;
+}
+.birthday{
+    border: 2px solid white;
+    border-bottom: 3px solid rgb(225, 219, 219);
+    width: 60%;
+    height: 40px;
+    outline: none;
+}
+.location{
+    color:grey ;
+    text-align: left;
+    font-size: 13px;
+    border: 2px solid white;
+    border-bottom: 3px solid rgb(225, 219, 219);
+    width: 60%;
+    height: 40px; 
+    outline: none;
+}
+.error_message{
+    color: red;
+    text-align: center;
+    font-weight: 600;
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+}
