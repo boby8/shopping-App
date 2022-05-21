@@ -33,7 +33,11 @@ const WhomToDeliver = () => {
       searchedData.phoneBook &&
       searchedData.phoneBook.success === false
     ) {
-      toast(searchedData.phoneBook.error.message);
+      toast(searchedData.phoneBook.error.message,{
+        autoClose: 2000,
+        position: "top-right", 
+        theme:"dark"
+      });
     } else if (
       searchedData.isSuccess === true &&
       searchedData.phoneBook &&
@@ -58,6 +62,18 @@ const WhomToDeliver = () => {
       toast(searchedData.phoneBookDelete.result.message);
     }
   };
+
+  const deletedUserData = () =>{
+    toast('🦄  User deleted successfully', {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      });
+  }
 
   const [letter, setLetter] = useState("");
   const [showEditFields, setShowEditFields] = useState(false);
@@ -228,7 +244,7 @@ const WhomToDeliver = () => {
             className="add_new_button"
             onClick={() => {
               handleAddUserForm();
-              notify();
+             
             }}
           >
             + Add New
@@ -244,6 +260,7 @@ const WhomToDeliver = () => {
                 handleFavApi={handleFavApi}
                 edit={edit == false}
                 notify={notify}
+                
                 
               />
             </div>
@@ -336,6 +353,8 @@ const WhomToDeliver = () => {
                     className="yes"
                     onClick={() => {
                       handleDeleteUserData(idfordott);
+                     
+                      
                     }}
                   >
                     Yes

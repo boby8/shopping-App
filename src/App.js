@@ -11,6 +11,7 @@ import NowDelivery from "./components/nowDelivery";
 import WhomToDeliver from "./components/whomToDeliver";
 import MyForm from "./components/myForm";
 import Toggle from './components/toggleButton';
+import MyOrder from './pages/MyOrder';
 
 
 
@@ -33,6 +34,7 @@ function App() {
         <Route path="nowdelivery" element={<NowDelivery/>}></Route>
         <Route path="myForm" element={<MyForm/>}></Route>
         <Route path="toggle" element={<Toggle/>}></Route>
+        <Route path="myorder" element={<MyOrder/>}></Route>
       </Routes>
     </>
   );

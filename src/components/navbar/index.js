@@ -3,8 +3,25 @@ import logo from "../../components/images/logo.png";
 import "./index.css";
 import Girl from "../../components/images/girls.svg";
 import DownArrow from '../../components/images/downArrow.svg';
+import { useNavigate } from "react-router-dom";
+import { jobListupdate,jobListCreatedupdate } from "../../redux/whomToDeliver/Action";
+import { useSelector, useDispatch } from "react-redux";
 
 const Navbar = () => {
+  const navigate = useNavigate();
+  const  dispatch = useDispatch();
+
+  const handleMyOrder =()=>{
+    navigate("/myorder");
+    dispatch(jobListupdate());
+   
+  }
+  const handleWhomToDeliver = () =>{
+    navigate("/whomtodeliver")
+  }
+  const handleHomePage=()=>{
+    navigate("/homepage")
+  }
   return (
     <>
       <div className="boder_of_navigation">
@@ -15,9 +32,9 @@ const Navbar = () => {
             <p className="delivery_app">DELIVERY_APP</p>
           </div>
           <div className="fields_name">
-            <a href="#">My Profile</a>
-            <a href="#">My Order</a>
-            <a href="#">Address Book</a>
+            <a onClick={handleHomePage}>My Profile</a>
+            <a onClick={handleMyOrder}>My Order</a>
+            <a onClick={handleWhomToDeliver}>Address Book</a>
 
             <label className="dropdownInNavbar">
               <img src={Girl} className="girlImgContainer" />

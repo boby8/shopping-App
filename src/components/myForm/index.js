@@ -140,10 +140,9 @@ const MyForm = (props) => {
           <button
             className="Add_conatct_button"
             onClick={() => {
-              props.edit == true ? handleUpdateOfExistingUserData() : 
-              props.notify()
-              handlePhoneBook()
-             
+              props.edit == true
+                ? handleUpdateOfExistingUserData()
+                : handlePhoneBook();
             }}
           >
             {props.button}
@@ -153,7 +152,7 @@ const MyForm = (props) => {
             onClick={() => {
               props.handleFavApi();
               props.closeForm();
-             
+              props.notify();
             }}
           >
             Cancel

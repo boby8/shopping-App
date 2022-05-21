@@ -28,6 +28,20 @@ import {
   PHONEBOOK_UPDATE_ERROR,
 } from "./ActionType";
 
+import { JOBLIST_REQ, JOBLIST_ERROR, JOBLIST_SUCCESS } from "./ActionType";
+
+import {
+  JOBLIST_CREATED_REQ,
+  JOBLIST_CREATED_SUCCESS,
+  JOBLIST_CREATED_ERROR,
+} from "./ActionType";
+
+import {
+  JOBLIST_FAILED_REQ,
+  JOBLIST_FAILED_SUCCESS,
+  JOBLIST_FAILED_ERROR,
+} from "./ActionType";
+
 const favouritrUserUrl = () => {
   //   console.log(username, password, "url");
   return `http://3.23.97.12:8000/api/v1/customer/phone-book/favorite`;
@@ -313,10 +327,9 @@ export function PhoneBookupdate(data) {
         id: id,
         address_latitude: 1234.23456,
         address_longitude: 12223.6543,
-        
+
         isDefault: false,
         avatar: null,
-        
       }),
       headers: {
         "content-type": "application/json",
@@ -354,3 +367,116 @@ function updatePhoneBookError(updatePhoneBookData) {
     payload: updatePhoneBookData,
   };
 }
+
+//JOBLIST
+
+const joblistUrl = () => {
+  // console.log(letter, "url");
+  return "http://3.23.97.12:8000/api/v1/transaction/customer/job-list?order=ASC";
+};
+
+export function jobListupdate() {
+  return (dispatch) => {
+    dispatch(joblistReq());
+
+    const url = joblistUrl();
+
+    console.log(url, "joblist");
+
+    fetch(url, {
+      method: "GET",
+      // body: JSON.stringify({
+
+      // }),
+      headers: {
+        "content-type": "application/json",
+        authorization: `bearer ${localStorage.getItem("token")}`,
+      },
+    })
+      .then((resp) => resp.json())
+      .then((joblistDetail) => dispatch(joblistSuccess(joblistDetail)))
+      .catch(() => {
+        dispatch(joblistError());
+      });
+  };
+}
+
+function joblistReq(joblistData) {
+  console.log(joblistData, "55");
+  return {
+    type: JOBLIST_REQ,
+    payload: joblistData,
+  };
+}
+function joblistSuccess(joblistData) {
+  console.log(joblistData, "56");
+  return {
+    type: JOBLIST_SUCCESS,
+    payload: joblistData,
+  };
+}
+function joblistError(joblistData) {
+  console.log(joblistData, "57");
+  return {
+    type: JOBLIST_ERROR,
+    payload: joblistData,
+  };
+}
+
+//JOBLIST CREATED
+
+const joblistCreatedUrl = (data) => {
+  // console.log(letter, "url");
+  return `http://3.23.97.12:8000/api/v1/transaction/customer/job-list?filter=${data}&order=ASC`;
+};
+
+export function jobListCreatedupdate(data) {
+  return (dispatch) => {
+    dispatch(joblistCreatedReq());
+
+    const url = joblistCreatedUrl(data);
+
+    console.log(url, "joblistCreated");
+
+    fetch(url, {
+      method: "GET",
+      // body: JSON.stringify({
+
+      // }),
+      headers: {
+        "content-type": "application/json",
+        authorization: `bearer ${localStorage.getItem("token")}`,
+      },
+    })
+      .then((resp) => resp.json())
+      .then((joblistCreatedDetail) =>
+        dispatch(joblistCreatedSuccess(joblistCreatedDetail))
+      )
+      .catch(() => {
+        dispatch(joblistCreatedError());
+      });
+  };
+}
+
+function joblistCreatedReq(joblistCreatedData) {
+  console.log(joblistCreatedData, "55");
+  return {
+    type: JOBLIST_CREATED_REQ,
+    payload: joblistCreatedData,
+  };
+}
+function joblistCreatedSuccess(joblistCreatedData) {
+  console.log(joblistCreatedData, "56");
+  return {
+    type: JOBLIST_CREATED_SUCCESS,
+    payload: joblistCreatedData,
+  };
+}
+function joblistCreatedError(joblistCreatedData) {
+  console.log(joblistCreatedData, "57");
+  return {
+    type: JOBLIST_CREATED_ERROR,
+    payload: joblistCreatedData,
+  };
+}
+
