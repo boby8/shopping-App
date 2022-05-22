@@ -17,7 +17,7 @@
 }
 .search-icon-inputField {
   display: flex;
-  border-bottom: 2px solid grey;
+  border-bottom: 2px solid #bab4b4;
   width: 60%;
 }
 .inputField {
@@ -52,4 +52,83 @@
   padding: 6px;
   margin-left: 5px;
   outline: none;
+}
+
+.job-list-data-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 20px 0;
+  box-shadow: 0 0 20px 3px rgb(0 0 0 / 12%);
+  border-radius: 8px;
+  padding: 20px;
+  position: relative;
+}
+.id-cancel-report-container {
+  display: flex;
+  justify-content: space-between;
+  color: #5d6965;
+  font-size: 18px;
+  flex-wrap: wrap;
+}
+.heading-container {
+  display: flex;
+  width: 60%;
+  justify-content: space-between;
+  font-size: 13.5px;
+  color: grey;
+}
+.time-cost-container {
+  display: flex;
+  color: grey;
+    font-size: 15px;
+}
+.cancel-button {
+  color: #0ed08b;
+  background: #cbfceb;
+  margin-left: 20px;
+}
+.report-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgb(246, 108, 108);
+  color: rgb(251, 176, 176);
+  background-color: #fff;
+  width: 80px;
+  height: 30px;
+  border-radius: 5px;
+}
+.calender {
+  width: 15px;
+    margin: 0;
+    padding: 5px;
+}
+.calender-time-conatiner{
+  display: flex;
+    
+    width: 32%;
+}
+.pickup-partner{
+  font-size: 14px;
+  color: #858e8b;
+  margin: 20px 0 10px;
+}
+.not-assigned{
+  color: #79827f;
+    font-size: 12px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+.id-status-container{
+  display: flex;
+}
+.popUP-report-form{
+  background: #fff;
+    box-shadow: 0 0 20px rgb(0 0 0 / 20%);
+    z-index: 1;
+    position: absolute;
+    width: 450px;
+    left: 35%;
+    top: 50px;
 }

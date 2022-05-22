@@ -6,6 +6,8 @@ import namePasswordReducer from "./namePasswordSharing/ActionReducer";
 import loginWithMObileReducer from "./login/ActionReducer";
 import fullUserDetailsReducer from './fullDetailsForAccountApI/ActionReducer';
 import favouriteUserReducer from "./whomToDeliver/ActionReducer";
+import jobListUserReducer from "./MyOrder/ActionReducer";
+
 
 
 
@@ -17,6 +19,8 @@ export const rootReducer = combineReducers({
   requriedPhoneLoginData: loginWithMObileReducer,
   requriedAccountCreated : fullUserDetailsReducer,
   requriedFavouriteUser : favouriteUserReducer,
+  requreiedJobList : jobListUserReducer,
+  
  
 
 });

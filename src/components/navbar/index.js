@@ -2,26 +2,24 @@ import React from "react";
 import logo from "../../components/images/logo.png";
 import "./index.css";
 import Girl from "../../components/images/girls.svg";
-import DownArrow from '../../components/images/downArrow.svg';
+import DownArrow from "../../components/images/downArrow.svg";
 import { useNavigate } from "react-router-dom";
-import { jobListupdate,jobListCreatedupdate } from "../../redux/whomToDeliver/Action";
+
 import { useSelector, useDispatch } from "react-redux";
 
 const Navbar = () => {
   const navigate = useNavigate();
-  const  dispatch = useDispatch();
+  const dispatch = useDispatch();
 
-  const handleMyOrder =()=>{
+  const handleMyOrder = () => {
     navigate("/myorder");
-    dispatch(jobListupdate());
-   
-  }
-  const handleWhomToDeliver = () =>{
-    navigate("/whomtodeliver")
-  }
-  const handleHomePage=()=>{
-    navigate("/homepage")
-  }
+  };
+  const handleWhomToDeliver = () => {
+    navigate("/whomtodeliver");
+  };
+  const handleHomePage = () => {
+    navigate("/homepage");
+  };
   return (
     <>
       <div className="boder_of_navigation">
@@ -43,6 +41,8 @@ const Navbar = () => {
             </label>
           </div>
         </div>
+
+      
       </div>
     </>
   );
