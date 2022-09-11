@@ -24,7 +24,8 @@ const MoreDetailsForAccount = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    if (sendOTPData.data && sendOTPData.isSuccess === false) {
+    if (sendOTPData.data && sendOTPData.isSuccess === false)
+     {
       navigate("/");
     }
   });

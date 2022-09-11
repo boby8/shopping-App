@@ -125,10 +125,25 @@
 }
 .popUP-report-form{
   background: #fff;
-    box-shadow: 0 0 20px rgb(0 0 0 / 20%);
-    z-index: 1;
-    position: absolute;
-    width: 450px;
-    left: 35%;
-    top: 50px;
+  box-shadow: 0 0 20px rgb(0 0 0 / 20%);
+  z-index: 1;
+  position: absolute;
+  width: 450px;
+  left: 35%;
+  top: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media(max-width:700px) {
+  .popUP-report-form{
+    margin-top: 5%;
+    margin-left: -25%;
+  }
+  
+}
+.popUP-report-form-overlay{
+  opacity: .50 !important;
+    filter: Alpha(Opacity=50) !important;
+    background-color: rgb(50, 50, 50) !important;
 }

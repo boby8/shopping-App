@@ -13,7 +13,6 @@ import Navbar from "../../components/navbar";
 import calender from "../../components/images/calender.svg";
 import flag from "../../components/images/flag.svg";
 import ReportOrder from "../../components/ReportOrder";
-import { useSelect } from "@mui/base";
 
 const MyOrder = () => {
   var job_Id = "";
@@ -23,24 +22,20 @@ const MyOrder = () => {
   const myOrdereddata = useSelector((store) => store.requreiedJobList);
   console.log(myOrdereddata);
 
-  const [jobList, setJobList] = useState(true);
-  const [filterbyStatus, setFilterByStatus] = useState(false);
-  const [jobListCreatedd, setjobListCreated] = useState(false);
-  //const [newestToOldest,setNewestToOldest] = useSelect(false);
-
-  var jobListNewest = false;
-
-  //function1 call
+  var jobList=true;
+  var jobListCreated=false;
+  var jobListFilterBystaus=false;
   useEffect(() => {
+    
+    if(jobList){
     dispatch(jobListupdate());
-    setState();
-  }, [jobList === true]);
+  }
+  }, []);
 
-  const setState = () => {};
-  //newest to oldest fun3
+
+  //newest to oldest
   const handleMyOrderList = (data) => {
-     
-      dispatch(jobListOrderupdate(data));
+    dispatch(jobListOrderupdate(data));
     
   };
 
@@ -55,29 +50,42 @@ const MyOrder = () => {
   };
 
   const idd = localStorage.getItem("jobId");
-  //dropdowm functionm 2
+
+  const handleFilterByStatusDropDown=()=>{
+    jobListCreated=true;
+    jobList=false;
+    jobListFilterBystaus=false;
+
+  }
+
+  const  handleFilterByStatusOption=()=>{
+    jobListCreated=false;
+    jobList=false;
+    jobListFilterBystaus=true;
+  }
 
   const handleMyOrderCreated = (data) => {
-    setJobList(false);
+    
+   
     if (data === "filter") {
-      setFilterByStatus(true);
-      setjobListCreated(false);
-     
-      
-      dispatch(jobListupdate());
+      handleFilterByStatusOption();
+      if(jobListFilterBystaus){
+      dispatch(jobListupdate());}
     } else {
-      setjobListCreated(true);
-      setFilterByStatus(false);
-     
+      handleFilterByStatusDropDown();
+      if(jobListCreated){
       dispatch(jobListCreatedupdate(data));
     }
   };
+}
+
 
   return (
     <>
       {reportOpen === true ? (
         <div className="popUP-report-form">
-          <ReportOrder handleReportVisible={handleReportVisible} />
+          <ReportOrder handleReportVisible={handleReportVisible}
+           />
         </div>
       ) : null}
       <Loader size="40px" color="blue" visible={myOrdereddata.isRequest} />
@@ -128,57 +136,11 @@ const MyOrder = () => {
             </div>
           </div>
         </div>
-        {jobList === true ? (
-          <div>
-            {myOrdereddata &&
-            myOrdereddata.isSuccess === true &&
-            myOrdereddata.jobList &&
-            myOrdereddata.jobList.success === true ? (
-              <div>
-                {myOrdereddata.jobList.result.map((data) => {
-                  return (
-                    <div className="job-list-data-container">
-                      <div className="id-cancel-report-container">
-                        <div className="id-status-container">
-                          <p>#{data.id}</p>
-                          <p className="cancel-button">{data.status}</p>
-                        </div>
 
-                        <button
-                          className="report-btn"
-                          onClick={() => {
-                            job_Id = data.id;
-                            handleReportVisible();
-                          }}
-                        >
-                          <img src={flag} style={{ width: "10px" }} />
-                          Report
-                        </button>
-                      </div>
-                      <div className="heading-container">
-                        <p>Delivery Complete on</p>
-                        <p>Cost</p>
-                        <p>Delivered to</p>
-                      </div>
-                      <div className="time-cost-container">
-                        <div className="calender-time-conatiner">
-                          <p className="calender ">
-                            <img src={calender} alt="" />
-                          </p>
-                          <p>{data.estimateTimeArrival}</p>
-                        </div>
-                        <p>{data.cost}</p>
-                      </div>
-                      <p className="pickup-partner">Pickup Partner</p>
-                      <p className="not-assigned">Not Assigned</p>
-                    </div>
-                  );
-                })}
-              </div>
-            ) : null}
-          </div>
-        ) : null}
-        {jobListCreatedd == true ? (
+        {myOrdereddata &&
+        myOrdereddata.isSuccess === true &&
+        myOrdereddata.jobListCreated &&
+        myOrdereddata.jobListCreated.success === true ? (
           <div>
             {myOrdereddata &&
             myOrdereddata.isSuccess === true &&
@@ -199,7 +161,7 @@ const MyOrder = () => {
                           className="report-btn"
                           onClick={() => {
                             job_Id = data.id;
-
+                            
                             handleReportVisible();
                           }}
                         >
@@ -231,9 +193,7 @@ const MyOrder = () => {
               "NO DATA FOUND"
             )}
           </div>
-        ) : null}
-
-        {filterbyStatus === true ? (
+        ) : (
           <div>
             {myOrdereddata &&
             myOrdereddata.isSuccess === true &&
@@ -282,9 +242,7 @@ const MyOrder = () => {
               </div>
             ) : null}
           </div>
-        ) : null}
-
-        
+        )}
       </div>
     </>
   );

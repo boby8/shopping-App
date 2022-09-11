@@ -4,6 +4,7 @@ import { Reportupdate } from "../../redux/MyOrder/Action";
 import { useSelector, useDispatch } from "react-redux";
 
 const ReportOrder = (props) => {
+  
   const [reason, setReason] = useState("");
   const idd = localStorage.getItem("jobId");
   const dispatch = useDispatch();
@@ -22,15 +23,15 @@ const ReportOrder = (props) => {
       <div className="report-order-container">
         <div className="repoert-cross">
           <p className="report-order-heading">Report Order</p>
-          <button className="cross-button" >
+          <button className="cross-button" onClick={()=>{props.handleReportVisible()}} >
             ×
           </button>
         </div>
         <hr style={{ width: "100%" }} />
-        <p>Do you want to report the order #jtr_rwxOVwuEaE?</p>
+        <p>Do you want to report the order #{idd}?</p>
         <div>
           <input
-            type="text"
+            type="text" 
             placeholder="Add report reason"
             onChange={handleReason}
             className="inputFieldd"
